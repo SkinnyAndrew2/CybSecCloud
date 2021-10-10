@@ -6,7 +6,13 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-  - !(ansible/pentest.yml)
+  ansible/
+	ansible.cfg
+	elk-playbook.yml
+	filebeat-configuration.yml
+	filebeat-playbook.yml
+	metricbeat-configuration.yml
+	metricbeat-playbook.yml
 
 This document contains the following details:
 - Description of the Topology
@@ -19,10 +25,10 @@ This document contains the following details:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Demonstration Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly redundant, in addition to restricting outside traffic to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- What aspect of security do load balancers protect? Load balancers prevent direct access to the Webservers and hides their IP addresses. What is the advantage of a jump box? The advantage of a jump box is that it enables there to only be the jumpbox that exposes the one outside address for administration access. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the configuration files and system files/logs.
 - What does Filebeat watch for? Filebeat watches for SSH logins, linux account logs, and sudo commands
