@@ -87,7 +87,7 @@ The following screenshot displays the result of running `docker ps` after succes
 This ELK server is configured to monitor the following machines:
 - List the IP addresses of the machines you are monitoring
   - Webserver 1: 10.0.0.6
-  - Webserver 2: 10.0.0.7
+  - Webserver 2: 10.0.0.5
 
 We have installed the following Beats on these machines:
 - Specify which Beats you successfully installed - The beats that were successfully installed were Filebeat and Metricbeat
