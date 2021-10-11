@@ -44,6 +44,14 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | TODO     |          |            |                  |
 | TODO     |          |            |                  |
 
+| Name         | Function                 | IP Address | Operating System            |
+|--------------|--------------------------|------------|-----------------------------|
+| Jump Box     | Gateway                  | 10.10.0.4  | Ubuntu Linux                |
+| ELKServer    | Elastic Stack Server     | 10.1.0.4   | Ubuntu Linux                |
+| Webserver1   | Webserver                | 10.0.0.6   | Ubuntu Linux                |
+| Webserver2   | Webserver                | 10.0.0.5   | Ubuntu Linux                |
+| LoadBalancer | Webserver Load Balancer  | 10.0.0.2   | Azure Virtual Load Balancer |
+
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
