@@ -37,13 +37,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-
 | Name         | Function                 | IP Address | Operating System            |
 |--------------|--------------------------|------------|-----------------------------|
 | Jump Box     | Gateway                  | 10.10.0.4  | Ubuntu Linux                |
@@ -57,19 +50,20 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- Add whitelisted IP addresses - My Personal IP is the only IP address that gets access to the Jumpbox
+- Add whitelisted IP addresses - My personal PC on my home network has the only IP address that gets access to the Jumpbox, due to being the only external machine with the RSA Public Key.
 
 Machines within the network can only be accessed by Jumpbox.
 - Which machine did you allow to access your ELK VM? What was its IP address?
-  - Jumpbox gets access ELK VM. Jumpbox IP:
+  - Jumpbox gets access ELK VM. Jumpbox IP: 10.10.0.4
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name        | Publicly Accessible | Allowed IP Addresses          |
+|-------------|---------------------|-------------------------------|
+| Jump Box    | Yes                 | 10.1.0.4                      |
+| Webservers  | Port TCP 443 only   | 10.0.0.2                      |
+| LoadBalancer| Port TCP 443 only   |                               |
+| ELKServer   | No                  | 10.10.0.4, 10.0.0.6, 10.0.0.5 |
 
 ### Elk Configuration
 
